@@ -6,7 +6,29 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid   ShowGridLines="True">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <!--Detta gör den dubbelt så stor som övriga-->
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Content="Knapp" Visibility="Visible" Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="2"/>
+
+        <StackPanel Grid.Row="1" Grid.Column="2">
+            <Button Content="Knapp" Margin="15,15,15,8" MinWidth="150"/>
+            <Button Content="Knapp" Margin="15,7,15,15"/>
+        </StackPanel>
+        <!--Förstår inte riktigt vad "Collapsed" gör?-->
     </Grid>
 </Window>
